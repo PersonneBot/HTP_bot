@@ -4,11 +4,12 @@ var prefix = "/";
 let SalonMembres = "0";
 let reactionMessages = [];
 client.login(process.env.TOKEN);
+const github = process.env.GITHUB;
 const fs = require('fs');
 client.setMaxListeners(30);
 
 //ajouter ce bot sur heroku et github
-//les fichiers ne se modifientpas sur github
+//les fichiers ne se modifientpas sur github, créer une bas de données mySQL grâce a heroku addons
 
 //on ready
 client.on("ready", () => {
@@ -26,6 +27,8 @@ client.on("ready", () => {
       });
     }
   }
+  fs.writeFileSync("github/ok.txt" , "nice tout ca" , "utf-8");
+  
 });
 
 
