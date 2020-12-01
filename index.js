@@ -4,7 +4,6 @@ var prefix = "/";
 let SalonMembres = "0";
 let reactionMessages = [];
 client.login(process.env.TOKEN);
-const github = process.env.GITHUB;
 const fs = require('fs');
 client.setMaxListeners(30);
 
@@ -27,8 +26,7 @@ client.on("ready", () => {
       });
     }
   }
-  fs.writeFileSync(github + "/data_tempban.txt" , "nice tout ca" , "utf-8");
-  
+
 });
 
 
