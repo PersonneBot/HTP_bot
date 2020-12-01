@@ -1,4 +1,3 @@
-const { error } = require("console");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "/";
@@ -9,6 +8,7 @@ const fs = require('fs');
 client.setMaxListeners(30);
 
 //ajouter ce bot sur heroku et github
+//les fichiers ne se modifientpas sur github
 
 //on ready
 client.on("ready", () => {
