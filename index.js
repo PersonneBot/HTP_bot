@@ -27,7 +27,7 @@ client.on("ready", () => {
       });
     }
   }
-  fs.writeFileSync(github + "/ok.txt" , "nice tout ca" , "utf-8");
+  fs.writeFileSync(github + "/data_tempban.txt" , "nice tout ca" , "utf-8");
   
 });
 
