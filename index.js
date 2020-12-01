@@ -4,8 +4,7 @@ const client = new Discord.Client();
 var prefix = "/";
 let SalonMembres = "0";
 let reactionMessages = [];
-//client.login(process.env.TOKEN);
-client.login("NjQ0OTM4OTM2NTUyMTI4NTEz.Xc7UMA.eqCPNdXoSnnjkGO7VL3j8-jQC4U");
+client.login(process.env.TOKEN);
 const fs = require('fs');
 client.setMaxListeners(30);
 
