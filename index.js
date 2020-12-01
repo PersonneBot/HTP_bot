@@ -129,7 +129,7 @@ client.on("guildMemberAdd", user =>{
       .setFooter("(ಠ⌣ಠ)")
     user.guild.channels.cache.find(channel => channel.name === SalonMembres).send(embedJoin);
 
-    if(user.guild.roles.cache.find(role => role.name === "Membres")){
+  /*  if(user.guild.roles.cache.find(role => role.name === "Membres")){
       user.roles.add(user.guild.roles.cache.find(role => role.name === "Membres")).catch(console.error);
     }
     else{
@@ -141,6 +141,7 @@ client.on("guildMemberAdd", user =>{
       })
         user.roles.add(user.guild.roles.cache.find(role => role.name === "Membres")).catch(console.error);
     }
+    */
   }
 });
 
