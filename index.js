@@ -455,11 +455,11 @@ client.on("message", message =>{
     + "**/unmute @personne** : Unmute une personne.\n\n"
     + "**/ban @personne** : Bannir quelqu'un.\n\n"
     + "**/unban [id]** : Débannir quelqu'un.\n\n"
-    + "**/tempban @personne [minutes]** : Tempban quelqu'un.**Momentanemment Indisponible**\n\n"
+    + "**/tempban @personne [minutes]** : Tempban quelqu'un.\n**Momentanemment Indisponible**\n\n"
     + "**/kick @personne** : Expulser quelqu'un.\n\n"
-    + "**/warn @personne** : Warn quelqu'un. `5 warn < 1H = tempban 30min``.**Momentanemment Indisponible**\n\n"
+    + "**/warn @personne** : Warn quelqu'un. `5 warn < 1H = tempban 30min``.\n**Momentanemment Indisponible**\n\n"
     + "**/msg **[**texte**] : Faire parler le bot.\n_Ex : /msg Bonjour_\n\n"
-    + "**/memberChannel **[**salon**] : Changer le salon pour les message d'arrivée.\n_Ex : /memberChannel annonces_\n\n"
+    + "**/memberChannel **[**salon**] : Changer le salon pour les message d'arrivée.\n_Ex : /memberChannel annonces_\n**Momentanemment Indisponible**\n\n"
     + "**/embed **[**type**] [**contenu**] : Créer un embed.\n_Ex : /embed titre: ceci est un titre._\n\n"
     + "**/help embed** : Obtenir de l'aide sur l'utilisation de la commande **/embed**")
     .setFooter("(ಠ⌣ಠ)")
