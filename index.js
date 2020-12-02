@@ -457,10 +457,10 @@ client.on("message", message =>{
     + "**/unban [id]** : Débannir quelqu'un.\n\n"
     + "**/tempban @personne [minutes]** : Tempban quelqu'un.**Momentanemment Indisponible**\n\n"
     + "**/kick @personne** : Expulser quelqu'un.\n\n"
-    + "**/warn @personne** : Warn quelqu'un.**5 warn** < **1H** = **tempban 30min**.**Momentanemment Indisponible**\n\n"
+    + "**/warn @personne** : Warn quelqu'un. `5 warn < 1H = tempban 30min``.**Momentanemment Indisponible**\n\n"
     + "**/msg **[**texte**] : Faire parler le bot.\n_Ex : /msg Bonjour_\n\n"
     + "**/memberChannel **[**salon**] : Changer le salon pour les message d'arrivée.\n_Ex : /memberChannel annonces_\n\n"
-    + "**/embed **[**type**] [**contenu**] : Créer un embed.\n_Ex : /embed titre: ceci est un titre._\n"
+    + "**/embed **[**type**] [**contenu**] : Créer un embed.\n_Ex : /embed titre: ceci est un titre._\n\n"
     + "**/help embed** : Obtenir de l'aide sur l'utilisation de la commande **/embed**")
     .setFooter("(ಠ⌣ಠ)")
     message.channel.send(helpEmbed);
@@ -889,5 +889,58 @@ client.on("message", message =>{
         .setFooter("(ಠ⌣ಠ)")
       message.channel.send(embed);
     }
+  }
+});
+
+
+// commande /help embed
+
+client.on("message", message =>{
+  if(message.content.indexOf(prefix + "help embed")){
+    let embed = new Discord.MessageEmbed()
+      .setTitle(prefix + "help embed")
+      .setColor("#00FF3F")
+      .setTitle(prefix + "help embed")
+      .setDescription("Pour utiliser la commande " + prefix + "embed, il faut d'abord renseigner le type de ce que vous voulez ajouter à l'embed.\n"
+      + "_Ex : " + prefix + "embed titre: ceci est le titre_\n"
+      + "Renverra :")
+    message.channel.send(embed);
+    let embed = new Discord.MessageEmbed()
+      .setTitle("ceci est le titre")
+    message.channel.send(embed);
+    let embed = new Discord.MessageEmbed()
+      .setColor("#00FF3F")
+      .setDescription("Il existe aussi le type `couleur:` qui permet de changer la couleur de l'embed.\n"
+      + "La couleur doit être renseignée en héxadécimal. Le fonctionnement de l'héxadécimal est assez complexe :\n"
+      + "Les valeurs héxadécimales sont composées de 6 lettres ou chiffres, les 2 premiers sont la quantité de rouge, les 2 suivants sont la "
+      + "quantité de vert et les 2 derniers la quantité de bleu.\n"
+      + "_Ex : #00FF00_\n"
+      + "Les chiffres qui peuvent être renseignés sont `01223456789ABCDEF`, `F` étant la valeur la plus haute.\n"
+      + "Voici un ordre allant de `00` à `FF` pour vour clarifier les idées :\n"
+      + "`00`,`01`,`02` ... `09`,`0A` ... `0F`,`10`,`11` ... `19`,`1F` ... `FF`\n"
+      + "N'oubliez pas le `#` avant les valeurs.\n"
+      + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #00FF00_\n"
+      + "Renverra :")
+    message.channel.send(embed);
+    let embed = new Discord.MessageEmbed()
+      .setTitle("ceci est le titre")
+      .setColor("#00FF00")
+    message.channel.send(embed);
+    let embed = new Discord.MessageEmbed()
+      .setColor("#00FF3F")
+      .setDescription("Il faut savoir également que si vous faites des mélanges de couleurs, plus les valeurs seront hautes, plus la couleur sera claire.\n"
+      + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #BBFFBB_\n"
+      + "Renverra :")
+    message.channel.send(embed);
+    let embed = new Discord.MessageEmbed()
+      .setTitle("ceci est le titre")
+      .setColor("#BBFFBB")
+    message.channel.send(embed);
+    let embed = new Discord.MessageEmbed()
+      .setColor("#00FF3F")
+      .setTitle("Liste des types :")
+      .setDescription("-`titre:`\n-`couleur:`\n-`description:`\n-`auteur:`\n")
+      .setFooter("(ಠ⌣ಠ)")
+    message.channel.send(embed);
   }
 });
