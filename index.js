@@ -453,10 +453,15 @@ client.on("message", message =>{
     + "**/clear **[**1**] : Effacer des messages.\n_Ex : /clear 7_\n\n"
     + "**/mute @personne** : Mute une personne.\n\n"
     + "**/unmute @personne** : Unmute une personne.\n\n"
-    + "**/ban @personne** : Expulser quelqu'un.\n\n"
+    + "**/ban @personne** : Bannir quelqu'un.\n\n"
+    + "**/unban [id]** : Débannir quelqu'un.\n\n"
+    + "**/tempban @personne [minutes]** : Tempban quelqu'un.**Momentanemment Indisponible**\n\n"
+    + "**/kick @personne** : Expulser quelqu'un.\n\n"
+    + "**/warn @personne** : Warn quelqu'un.**5 warn** < **1H** = **tempban 30min**.**Momentanemment Indisponible**\n\n"
     + "**/msg **[**texte**] : Faire parler le bot.\n_Ex : /msg Bonjour_\n\n"
     + "**/memberChannel **[**salon**] : Changer le salon pour les message d'arrivée.\n_Ex : /memberChannel annonces_\n\n"
-    + "**/embed **[**type**] [**contenu**] : Créer un embed.\n_Ex : /embed titre: ceci est un titre._")
+    + "**/embed **[**type**] [**contenu**] : Créer un embed.\n_Ex : /embed titre: ceci est un titre._\n"
+    + "**/help embed** : Obtenir de l'aide sur l'utilisation de la commande **/embed**")
     .setFooter("(ಠ⌣ಠ)")
     message.channel.send(helpEmbed);
     message.delete();
@@ -503,7 +508,7 @@ client.on("message", message =>{
         else if(type === "titre"){            //si le mots renvoyé par args[i] n'est pas un type, alors, si le mot précédent était un type,
           titre = titre + " " + args[i];       //ce mot fera parti de l'embed dans le type renvoyé precedemment
         }
-        else if(type === "description"){
+        else if(type === "description"){                            //+saut de ligne
           description = description + " " + args[i];
         }
         else if(type === "auteur"){
