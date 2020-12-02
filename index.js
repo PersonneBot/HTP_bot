@@ -905,10 +905,10 @@ client.on("message", message =>{
       + "_Ex : " + prefix + "embed titre: ceci est le titre_\n"
       + "Renverra :")
     message.channel.send(embed);
-    let embed = new Discord.MessageEmbed()
+    embed = new Discord.MessageEmbed()
       .setTitle("ceci est le titre")
     message.channel.send(embed);
-    let embed = new Discord.MessageEmbed()
+    embed = new Discord.MessageEmbed()
       .setColor("#00FF3F")
       .setDescription("Il existe aussi le type `couleur:` qui permet de changer la couleur de l'embed.\n"
       + "La couleur doit être renseignée en héxadécimal. Le fonctionnement de l'héxadécimal est assez complexe :\n"
@@ -922,21 +922,21 @@ client.on("message", message =>{
       + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #00FF00_\n"
       + "Renverra :")
     message.channel.send(embed);
-    let embed = new Discord.MessageEmbed()
+    embed = new Discord.MessageEmbed()
       .setTitle("ceci est le titre")
       .setColor("#00FF00")
     message.channel.send(embed);
-    let embed = new Discord.MessageEmbed()
+    embed = new Discord.MessageEmbed()
       .setColor("#00FF3F")
       .setDescription("Il faut savoir également que si vous faites des mélanges de couleurs, plus les valeurs seront hautes, plus la couleur sera claire.\n"
       + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #BBFFBB_\n"
       + "Renverra :")
     message.channel.send(embed);
-    let embed = new Discord.MessageEmbed()
+    embed = new Discord.MessageEmbed()
       .setTitle("ceci est le titre")
       .setColor("#BBFFBB")
     message.channel.send(embed);
-    let embed = new Discord.MessageEmbed()
+    embed = new Discord.MessageEmbed()
       .setColor("#00FF3F")
       .setTitle("Liste des types :")
       .setDescription("-`titre:`\n-`couleur:`\n-`description:`\n-`auteur:`\n")
