@@ -896,9 +896,9 @@ client.on("message", message =>{
 // commande /help embed
 
 client.on("message", message =>{
-  if(message.content.indexOf(prefix + "help embed")){
+  if(message.content.indexOf(prefix + "help embed") == 0){
     let embed = new Discord.MessageEmbed()
-      .setTitle(prefix + "help embed")
+      .setTitle(prefix + "help_embed")
       .setColor("#00FF3F")
       .setTitle(prefix + "help embed")
       .setDescription("Pour utiliser la commande " + prefix + "embed, il faut d'abord renseigner le type de ce que vous voulez ajouter à l'embed.\n"
@@ -919,22 +919,22 @@ client.on("message", message =>{
       + "Voici un ordre allant de `00` à `FF` pour vour clarifier les idées :\n"
       + "`00`,`01`,`02` ... `09`,`0A` ... `0F`,`10`,`11` ... `19`,`1F` ... `FF`\n"
       + "N'oubliez pas le `#` avant les valeurs.\n"
-      + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #00FF00_\n"
+      + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #0000FF_\n"
       + "Renverra :")
     message.channel.send(embed);
     embed = new Discord.MessageEmbed()
       .setTitle("ceci est le titre")
-      .setColor("#00FF00")
+      .setColor("#0000FF")
     message.channel.send(embed);
     embed = new Discord.MessageEmbed()
       .setColor("#00FF3F")
       .setDescription("Il faut savoir également que si vous faites des mélanges de couleurs, plus les valeurs seront hautes, plus la couleur sera claire.\n"
-      + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #BBFFBB_\n"
+      + "_Ex : " + prefix + "embed titre: ceci est le titre couleur: #FFAAAA_\n"
       + "Renverra :")
     message.channel.send(embed);
     embed = new Discord.MessageEmbed()
       .setTitle("ceci est le titre")
-      .setColor("#BBFFBB")
+      .setColor("#FFAAAA")
     message.channel.send(embed);
     embed = new Discord.MessageEmbed()
       .setColor("#00FF3F")
