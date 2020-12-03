@@ -896,7 +896,7 @@ client.on("message", message =>{
 // commande /help embed
 
 client.on("message", message =>{
-  if(message.content.indexOf(prefix + "help embed") == 0){
+  if(message.content.indexOf(prefix + "help_embed") == 0){
     let embed = new Discord.MessageEmbed()
       .setTitle(prefix + "help_embed")
       .setColor("#00FF3F")
