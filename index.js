@@ -488,6 +488,7 @@ client.on("message", message =>{
       let auteur = "";
       let couleur = "";
       let reaction = [];
+      let image = "";
       let reactionAdd = true;
       for(i = 1; i<args.length; i++){
         if(args[i] === "titre:"){                   //vérification du type, 
@@ -504,6 +505,9 @@ client.on("message", message =>{
         }
         else if (args[i] === "reaction:"){
           type = "reaction";
+        }
+        else if(args[i] === "image:"){
+          type = "image";
         }
         else if(type === "titre"){            //si le mots renvoyé par args[i] n'est pas un type, alors, si le mot précédent était un type,
           titre = titre + " " + args[i];       //ce mot fera parti de l'embed dans le type renvoyé precedemment
@@ -556,6 +560,9 @@ client.on("message", message =>{
             reaction.push(args[i]);
           }
         }
+        else if(type === "image"){
+          image = args[i];
+        }
         else if(type === "error"){        //si aucun type n'as été précisé dés le début de la commande,
           if(args[i] != undefined){
             message.channel.send("Veuillez spécifier une propriété de l'embed (titre:/description:/auteur:/couleur:)");
@@ -569,6 +576,7 @@ client.on("message", message =>{
         .setColor(couleur)
         .setTitle(titre)
         .setDescription(description)
+        .setImage(image)
         .setAuthor(auteur)
       message.delete();
       message.channel.send(embed).then(embedMessage =>{       //envoyer l'embed
