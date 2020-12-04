@@ -561,7 +561,7 @@ client.on("message", message =>{
           }
         }
         else if(type === "image"){
-          image = args[i];
+          image = image + args[i] + ",";
         }
         else if(type === "error"){        //si aucun type n'as été précisé dés le début de la commande,
           if(args[i] != undefined){
