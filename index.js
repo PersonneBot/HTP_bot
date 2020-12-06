@@ -889,6 +889,7 @@ client.on("message", message =>{
         + "**Créé le : **`" + message.guild.createdAt.getDate() + "/" + message.guild.createdAt.getMonth() + "/" + message.guild.createdAt.getFullYear() + "`")
         .setFooter("(ಠ⌣ಠ)")
       message.channel.send(embed);
+      message.delete();
     }
     else{                         //si aucun channel pour les membres n'a été trouvé
       let embed = new Discord.MessageEmbed()
