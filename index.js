@@ -963,7 +963,7 @@ client.on("message", message =>{
   if(message.content.indexOf(prefix + "horaire") == 0){
     if(message.content.trim().split(" ").length >= 3){
       let embed = new Discord.MessageEmbed()
-        .setAuthor(message.member.user.displayAvatarURL() + message.member.user.username)
+        .setAuthor(message.member.user.displayAvatarURL + message.member.user.username)
         .setTitle("**" + message.content.trim().split(" ")[1] + "** à **" + message.content.trim().split(" ")[2] + "**")
         .setColor("#AA2222")
       message.channel.send(embed);
