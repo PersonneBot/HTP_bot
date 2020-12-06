@@ -461,7 +461,8 @@ client.on("message", message =>{
     + "**/msg **[**texte**] : Faire parler le bot.\n_Ex : /msg Bonjour_\n\n"
     + "**/memberChannel **[**salon**] : Changer le salon pour les message d'arrivée.\n_Ex : /memberChannel annonces_\n**Momentanemment Indisponible**\n\n"
     + "**/embed **[**type**] [**contenu**] : Créer un embed.\n_Ex : /embed titre: ceci est un titre._\n\n"
-    + "**/help embed** : Obtenir de l'aide sur l'utilisation de la commande **/embed**")
+    + "**/help embed** : Obtenir de l'aide sur l'utilisation de la commande **/embed**\n\n"
+    + "**/horaire [H1] [H2]** : Envoyer un créneau horaire.\n_Ex : /horaire 14H30 15H30_")
     .setFooter("(ಠ⌣ಠ)")
     message.channel.send(helpEmbed);
     message.delete();
