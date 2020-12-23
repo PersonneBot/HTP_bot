@@ -13,11 +13,8 @@ client.setMaxListeners(30);
 client.on("ready", () => {
   console.log("Working")
   client.user.setActivity({
-    game: {
-        name: "/help pour de l'aide",
-        type: "Playing",
-        url: "https://discordapp.com/"
-    }
+    type: "PLAYING",
+        name: "/help pour de l'aide"
 });
   //ajout des messages au cache 
   let tableauDataAutorole = fs.readFileSync("data_autorole.txt", "utf-8").split("\n");  //tableauDataAutorole contiendra les lignes du fichier texte data
