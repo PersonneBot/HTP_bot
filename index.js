@@ -12,7 +12,7 @@ client.setMaxListeners(30);
 //on ready
 client.on("ready", () => {
   console.log("Working")
-  client.user.setPresence({
+  client.user.setActivity({
     game: {
         name: "/help pour de l'aide",
         type: "Playing",
