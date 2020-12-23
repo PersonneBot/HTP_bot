@@ -14,7 +14,7 @@ client.on("ready", () => {
   console.log("Working")
   client.user.setActivity({
     type: "LISTENING",
-    name: "/help pour de l'aide"
+    name: "/help"
 });
   //ajout des messages au cache 
   let tableauDataAutorole = fs.readFileSync("data_autorole.txt", "utf-8").split("\n");  //tableauDataAutorole contiendra les lignes du fichier texte data
