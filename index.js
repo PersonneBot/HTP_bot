@@ -13,7 +13,7 @@ client.setMaxListeners(30);
 client.on("ready", () => {
   console.log("Working")
   client.user.setActivity({
-    type: "CUSTOM",
+    type: "LISTENING",
     name: "/help pour de l'aide"
 });
   //ajout des messages au cache 
