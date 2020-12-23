@@ -7,12 +7,18 @@ client.login(process.env.TOKEN);
 const fs = require('fs');
 client.setMaxListeners(30);
 
-//ajouter ce bot sur heroku et github
 //les fichiers ne se modifientpas sur github, créer une bas de données mySQL grâce a heroku addons
 
 //on ready
 client.on("ready", () => {
   console.log("Working")
+  client.user.setPresence({
+    game: {
+        name: "/help pour de l'aide",
+        type: "Playing",
+        url: "https://discordapp.com/"
+    }
+});
   //ajout des messages au cache 
   let tableauDataAutorole = fs.readFileSync("data_autorole.txt", "utf-8").split("\n");  //tableauDataAutorole contiendra les lignes du fichier texte data
   let avancement_cache = 0;
@@ -976,3 +982,6 @@ client.on("message", message =>{
     }
   }
 })
+
+
+
