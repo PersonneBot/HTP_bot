@@ -13,8 +13,8 @@ client.setMaxListeners(30);
 client.on("ready", () => {
   console.log("Working")
   client.user.setActivity({
-    type: "COMPETING",
-        name: "/help pour de l'aide"
+    type: "CUSTOM",
+    name: "/help pour de l'aide"
 });
   //ajout des messages au cache 
   let tableauDataAutorole = fs.readFileSync("data_autorole.txt", "utf-8").split("\n");  //tableauDataAutorole contiendra les lignes du fichier texte data
