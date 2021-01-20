@@ -982,3 +982,37 @@ client.on("message", message =>{
 
 
 
+//musique
+
+const { VoiceConnection } = require('discord.js');
+const ytdl = require('ytdl-core-discord');
+
+
+client.on("message", message =>{
+if(message.content.indexOf(prefix + "p") == 0){
+
+module.exports = class PlayCommand{
+  /**
+   * @param {message} message
+   * @param {String} query 
+   */
+    async run(message, { query }){
+        await message.member.voice.channel.join().then((connection) => {
+            this.runVideo(message, connection, query);
+        });
+    }
+
+    /**
+     * 
+     * @param {VoiceConnection} connection 
+     * @param {*} video 
+     */
+    async runVideo(message, connection, video){
+        const dispatcher = connection.play( await ytdl(video, {filter: 'audioonly'}), {type: 'opus'})
+    
+    dispatcher.on('finish', () => {
+        message.member.voice.channel.leave();
+    });
+    }}
+  }
+})
