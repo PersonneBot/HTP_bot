@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "/";
+var prefix = "&";
 let SalonMembres = "0";
 let reactionMessages = [];
 client.login(process.env.TOKEN);
@@ -14,7 +14,7 @@ client.on("ready", () => {
   console.log("Working")
   client.user.setActivity({
     type: "LISTENING",
-    name: "/help"
+    name: "&help"
 });
   //ajout des messages au cache 
   let tableauDataAutorole = fs.readFileSync("data_autorole.txt", "utf-8").split("\n");  //tableauDataAutorole contiendra les lignes du fichier texte data
