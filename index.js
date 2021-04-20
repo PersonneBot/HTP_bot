@@ -982,6 +982,19 @@ client.on("message", message =>{
 
 
 
+//spam
+client.on("message", message =>{
+  if(message.content.indexOf(prefix + "spam") == 0){
+    if(message.split(" ").length = 3){
+      for(var i = 0;i< parseInt(message.split(" ")[1]);i++){
+        message.channel.send(message.split(" ")[2])
+      }
+    }
+  }
+})
+
+
+
 /*musique
 
 const { VoiceConnection } = require('discord.js');
