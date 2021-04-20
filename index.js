@@ -984,12 +984,15 @@ client.on("message", message =>{
 //ta gueule
 
 client.on("message", message =>{
-  message.member.roles.forEach(role => {
-    if(role.id === "833906519820337192"){
-      message.channel.send("Ta **gueule**");
-    }
-  });
+  if(message.member.roles.cache.has('833906519820337192')){
+    message.channel.send("Ta **gueule**");
+  };
 });
+
+
+
+
+
 
 
 
