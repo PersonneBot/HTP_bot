@@ -981,16 +981,11 @@ client.on("message", message =>{
 })
 
 
+//ta gueule
 
-//spam
 client.on("message", message =>{
-  if(message.content.indexOf(prefix + "spam") == 0){
-    if(message.content.trim().split(" ").length == 3){
-      for(var i = 0;i< parseInt(message.content.trim().split(" ")[1]);i++){
-        message.channel.send(message.content.trim().split(" ")[2])
-      }
-    }
-  }
+  if(message.author.id("434079193433899009")){
+    message.channel.send("Ta **gueule**");
 })
 
 
