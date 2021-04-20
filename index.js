@@ -984,9 +984,12 @@ client.on("message", message =>{
 //ta gueule
 
 client.on("message", message =>{
-  if(message.author.id == "434079193433899009"){
-    message.channel.send("Ta **gueule**");
-}});
+  message.member.roles.forEach(role => {
+    if(role.id === "833906519820337192"){
+      message.channel.send("Ta **gueule**");
+    }
+  });
+});
 
 
 
