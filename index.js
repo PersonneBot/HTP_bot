@@ -986,7 +986,7 @@ client.on("message", message =>{
 client.on("message", message =>{
   if(message.author.id("434079193433899009")){
     message.channel.send("Ta **gueule**");
-})
+}});
 
 
 
